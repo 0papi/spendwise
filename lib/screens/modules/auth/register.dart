@@ -27,6 +27,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
     // Handle registration logic here
     print('Name: $name, Email: $email, Password: $password');
+
+    Navigator.pushNamed(context, "/dashboard");
   }
 
   @override

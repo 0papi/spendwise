@@ -17,6 +17,10 @@ On the dashboard screen, I would love to see the following:
 - a card showing the total income
 - another card displaying total expense
 - another card showing balance
+- another card showing the savings
+- another card showing investment
+- some charts to visualize and also show details for each item: that is if we are viewing total expenses for instance, then we have the items with the most total expenses
+- and perhaps a table showing the latest transactions
 
 # Settings
 
