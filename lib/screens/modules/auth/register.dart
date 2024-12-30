@@ -25,9 +25,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
     final String email = _emailController.text;
     final String password = _passwordController.text;
 
-    // Handle registration logic here
-    print('Name: $name, Email: $email, Password: $password');
-
     Navigator.pushNamed(context, "/dashboard");
   }
 

@@ -16,7 +16,7 @@ class _BaseLayoutScreeenState extends State<BaseLayoutScreeen> {
   int _selectedPageIndex = 0;
 
   final _pages = [
-    const Dashboard(),
+    Dashboard(),
     const History(),
     const Settings(),
   ];
