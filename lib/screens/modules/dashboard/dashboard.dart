@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:spend_wise/components/common/TransactionCard.dart';
 import 'package:spend_wise/components/modules/dashboard/InfoCard.dart';
 
 import '../../../models/dashboardInfoCard.dart';
+import '../../../models/transaction.dart';
 
 class Dashboard extends StatelessWidget {
   Dashboard({super.key});
@@ -105,9 +107,60 @@ class Dashboard extends StatelessWidget {
                             type: curr.type),
                       );
                     }),
-              )
+              ),
 
+              const SizedBox(
+                height: 40,
+              ),
               // some charts here
+
+              // some transactions here
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text(
+                          "Recent Transactions",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {},
+                          child: const Text(
+                            "View All",
+                            style: TextStyle(
+                                color: Colors.blue,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        )
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    SizedBox(
+                      height: 300,
+                      child: ListView.builder(
+                          scrollDirection: Axis.vertical,
+                          itemCount: dummyTransactions.length,
+                          itemBuilder: (BuildContext context, int index) {
+                            final Transaction currentTransaction =
+                                dummyTransactions[index];
+                            return Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 8.0),
+                              child: Transactioncard(
+                                  currentTransaction: currentTransaction),
+                            );
+                          }),
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ));
