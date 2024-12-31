@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowMaterialGrid: false,
       title: 'SpendWise  | Save Smart',
       home: const SplashScreen(),
+      theme: ThemeData(fontFamily: 'Geist'),
       routes: {
         '/login': (context) => LoginScreen(),
         '/register': (context) => RegisterScreen(),

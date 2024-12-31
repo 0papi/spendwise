@@ -85,7 +85,7 @@ class Dashboard extends StatelessWidget {
             children: [
               // top section of dashboard with stat cards
               SizedBox(
-                height: 150,
+                height: 120,
                 child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     padding: const EdgeInsets.all(4.0),
@@ -96,6 +96,7 @@ class Dashboard extends StatelessWidget {
                       return Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 4.0),
                         child: InfoCard(
+                            percentage_value: curr.percentage_value,
                             percentage: curr.percentage,
                             title: curr.title,
                             amount: curr.amount,
